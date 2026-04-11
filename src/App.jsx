@@ -1,11 +1,11 @@
 import Navbar from "./components/Navbar";
-import HeroSection from "./Pages/LandingPage/HeroSection";
+import HomePage from "./Pages/LandingPage/HomePage";
 
 function App() {
   return(
     <>
     <Navbar />
-    <HeroSection   />
+    <HomePage   />
     </>
   )
 }
