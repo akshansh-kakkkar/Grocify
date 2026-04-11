@@ -1,13 +1,11 @@
-import { Route, Routes } from "react-router-dom";
 import Navbar from "./components/Navbar";
+import HeroSection from "./Pages/LandingPage/HeroSection";
 
 function App() {
   return(
     <>
     <Navbar />
-    <Routes>
-      <Route />
-    </Routes>
+    <HeroSection   />
     </>
   )
 }
