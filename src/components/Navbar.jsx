@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 import {
   faHeart,
@@ -11,11 +11,19 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { motion, AnimatePresence } from "motion/react";
 const Navbar = () => {
   const [open, setOpen] = useState(false);
+    const [scrolled, setScrolled] = useState(false);
+    useEffect(()=>{
+      const handleScroll = ()=>{
+        setScrolled(window.scrollY > 10)
+      }
+      window.addEventListener('scroll', handleScroll)
+    },[])
+  
   const active = ({ isActive }) => {
     return `${isActive ? " transition-all duration-300 text-orange-500" : ""}`;
   };
   return (
-    <div className="flex py-4 px-2 md:px-12 items-center text-center justify-between">
+    <div className={`flex py-4 px-2 md:px-12 items-center sticky top-0 bg-white z-120 text-center justify-between ${scrolled ? "shadow-lg" : ""}`}>
       <div className="text-3xl text-[#070707] inter tracking-widest font-bold">
         Gr<span className="text-orange-500">O</span>cify
       </div>

@@ -34,7 +34,7 @@ const ShopByCategory = () => {
           <div className="bg-orange-400 w-30 mt-3 mb-12 h-1"></div>
         </div>
         <div className="flex justify-center">
-          <div className="flex gap-6 overflow-x-auto  sm:px-6">
+          <div className="flex lg:gap-33 gap-6 overflow-x-auto  sm:px-6">
             {types.map((item) => {
               return (
                 <div className="flex-shrink-0 min-w-[300px] max-w-[400px] lg:w-[400px]" key={item.id}>
