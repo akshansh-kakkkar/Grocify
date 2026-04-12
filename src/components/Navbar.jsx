@@ -106,18 +106,18 @@ const Navbar = () => {
             />
           </div>
         </div>
-        <div className="hover:bg-[#d3d3d34a] cursor-pointer transition-all duration-300 px-1 py-2 items-center flex rounded-full">
+        <motion.div whileHover={{scale:1.1}} whileTap={{scale:0.95}} className="hover:bg-[#d3d3d34a] cursor-pointer transition-all duration-300 px-1 py-2 items-center flex rounded-full">
           <FontAwesomeIcon
             icon={faHeart}
             style={{ color: "#262626", fontSize: "25px" }}
           />
-        </div>
-        <div className="hover:bg-[#d3d3d34a] cursor-pointer transition-all duration-300 px-1 py-2 items-center flex rounded-full">
+        </motion.div>
+        <motion.div whileHover={{scale:1.1}} whileTap={{scale:0.95}} className="hover:bg-[#d3d3d34a] cursor-pointer transition-all duration-300 px-1 py-2 items-center flex rounded-full">
           <FontAwesomeIcon
             icon={faBagShopping}
             style={{ color: ` "#262626"`, fontSize: "25px" }}
           />
-        </div>
+        </motion.div>
         <motion.div
           initial={{ rotate: 0 }}
           animate={{ rotate: open ? 180 : 0 }}
