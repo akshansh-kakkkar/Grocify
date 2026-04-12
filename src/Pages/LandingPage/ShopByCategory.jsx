@@ -1,5 +1,5 @@
 import React from "react";
-
+import {motion} from 'framer-motion'
 const ShopByCategory = () => {
   const types = [
     {
@@ -39,7 +39,7 @@ const ShopByCategory = () => {
               return (
                 <div className="flex-shrink-0 min-w-[300px] max-w-[400px] lg:w-[400px]" key={item.id}>
                   <img
-                    className="sm:w-[400px]  h-[200px]  relative z-50"
+                    className="sm:w-[400px] select-none h-[200px]  relative z-50"
                     src={item.image}
                     alt={item.name}
                   />
@@ -48,9 +48,9 @@ const ShopByCategory = () => {
                       {item.name}
                     </div>
                     <div className="text-[#686868] flex-wrap">{item.description}</div>
-                    <div className="bg-gradient-to-b from-orange-400 to-orange-500 w-fit text-white text-lg flex items-center justify-center py-1 px-4 rounded-sm">
+                    <motion.div whileHover={{scale:1.1}} whileTap={{scale:0.95}}  className="cursor-pointer select-none bg-gradient-to-b from-orange-400 to-orange-500 w-fit text-white text-lg flex items-center justify-center py-1 px-4 rounded-sm">
                       See All
-                    </div>
+                    </motion.div>
                   </div>
                 </div>
               );

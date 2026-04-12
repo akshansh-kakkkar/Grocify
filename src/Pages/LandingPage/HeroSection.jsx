@@ -1,4 +1,4 @@
-import React from "react";
+import { AnimatePresence, motion } from "framer-motion";
 
 const HeroSection = () => {
   return (
@@ -15,9 +15,12 @@ const HeroSection = () => {
           Brand for a high content of benificial substances. Our products are
           all fresh and healthy.
         </div>
-        <div className="bg-gradient-to-b from-orange-400 to-orange-500 w-fit text-white text-2xl flex items-center justify-center py-2 px-6 rounded-sm">
+        <AnimatePresence>
+        <motion.button whileHover={{scale:1.1}} whileTap={{scale:0.95}} className="select-none cursor-pointer bg-gradient-to-b from-orange-400 to-orange-500 w-fit text-white text-2xl flex items-center justify-center py-2 px-6 rounded-sm">
           Shop Now
-        </div>
+        </motion.button>
+        </AnimatePresence>
+
       </div>
       <div>
         <img

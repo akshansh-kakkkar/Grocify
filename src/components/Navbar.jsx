@@ -8,7 +8,7 @@ import {
   faX,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { motion, AnimatePresence } from "motion/react";
+import { motion, AnimatePresence } from "framer-motion";
 const Navbar = () => {
   const [open, setOpen] = useState(false);
     const [scrolled, setScrolled] = useState(false);
