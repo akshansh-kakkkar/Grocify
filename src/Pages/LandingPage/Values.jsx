@@ -44,23 +44,23 @@ const Values = () => {
           <ValueItem
             icon={faHeart}
             title="Trust"
-            description="Built on years of reliability and commitment to our customers' satisfaction."
+            description="It is a long established fact that reader will  be distracted by the readable."
             reverse={true}
           />
           <ValueItem
             icon={faShieldHalved}
             title="Food Safety"
-            description="Strict quality controls ensuring every product meets the highest safety standards."
+            description="It is a long established fact that reader will  be distracted by the readable."
             reverse={true}
           />
         </div>        <div className="flex justify-center items-center order-1 lg:order-2">
           <motion.div
             className="relative"
           >
-            <div className="absolute "></div>
+            <div className="absolute  "></div>
             <img
               src="/assets/basket-full-vegetables.webp"
-              className="w-[280px] sm:w-[380px] lg:w-[480px] drop-shadow-2xl"
+              className="w-[280px] sm:w-[380px] select-none lg:w-[480px] drop-shadow-2xl"
               alt="fresh-vegetable-basket"
             />
           </motion.div>
@@ -70,13 +70,13 @@ const Values = () => {
           <ValueItem
             icon={faLeaf}
             title="Always Fresh"
-            description="Sourced daily from local farms to ensure maximum freshness and flavor."
+            description="It is a long established fact that reader will  be distracted by the readable."
             reverse={false}
           />
           <ValueItem
             icon={faSeedling}
             title="100% Organic"
-            description="Naturally grown without harmful pesticides, keeping you and nature healthy."
+            description="It is a long established fact that reader will  be distracted by the readable."
             reverse={false}
           />
         </div>

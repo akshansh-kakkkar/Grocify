@@ -24,6 +24,7 @@ const HeroSection = () => {
       </div>
       <div>
         <img
+        className="select-none"
           style={{ width: "550px" }}
           src="/assets/grocery.webp"
           alt="grocery basket"

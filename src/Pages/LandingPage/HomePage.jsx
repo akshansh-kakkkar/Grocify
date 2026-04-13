@@ -3,6 +3,7 @@ import HeroSection from './HeroSection'
 import ShopByCategory from './ShopByCategory'
 import Values from './Values'
 import DiscountBanner from '../../components/DiscountBanner'
+import OurProcess from './OurProcess'
 
 const HomePage = () => {
   return (
@@ -11,6 +12,7 @@ const HomePage = () => {
     <ShopByCategory />
     <Values />
     <DiscountBanner />
+    <OurProcess />
     </>
   )
 }

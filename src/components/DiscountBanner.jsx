@@ -2,7 +2,7 @@ import React from "react";
 import {motion} from 'framer-motion'
 const DiscountBanner = () => {
   return (
-    <div className="w-full h-[300px] bg-[#f5f5f5] flex items-center ">
+    <div className="w-full select-none h-[300px] bg-[#f5f5f5] flex items-center ">
       <div className="flex item-center text-orange-500 font-bold  text-center">
         <div className="md:text-9xl text-6xl inter -rotate-90 ">20%</div>
       </div>
