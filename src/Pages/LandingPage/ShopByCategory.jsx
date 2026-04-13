@@ -1,26 +1,26 @@
 import React from "react";
-import {motion} from 'framer-motion'
+import { motion } from "framer-motion";
 const ShopByCategory = () => {
   const types = [
     {
       id: 1,
       name: "Fruits & Veggies",
       description:
-        "Fresh, organic produce sourced daily form local farms. Explore a wide range of seasonal fruits and vegetables.",
+        "It is a long established fact that a reader will  be distracted by the readable.",
       image: "/assets/fruits-and-veggies.webp",
     },
     {
       id: 2,
       name: "Dairy & Eggs",
       description:
-        "Wholesome dairy products and free-range of eggs. From creamy milk and yogurt to artisanal cheeses.",
+        "It is a long established fact that a reader will  be distracted by the readable.",
       image: "/assets/dairy-and-eggs.webp",
     },
     {
       id: 3,
       name: "Meat & SeaFood",
       description:
-        "High quality, responsibly sourced meat and seafood. Choose from fresh cuts, marinated options, and more.",
+        "It is a long established fact that a reader will  be distracted by the readable.",
       image: "/assets/meat-and-seafood.webp",
     },
   ];
@@ -37,7 +37,10 @@ const ShopByCategory = () => {
           <div className="flex lg:gap-33 gap-6 overflow-x-auto  sm:px-6">
             {types.map((item) => {
               return (
-                <div className="flex-shrink-0 min-w-[300px] max-w-[400px] lg:w-[400px]" key={item.id}>
+                <div
+                  className="flex-shrink-0 min-w-[300px] max-w-[400px] lg:w-[400px]"
+                  key={item.id}
+                >
                   <img
                     className="sm:w-[400px] select-none h-[200px]  relative z-50"
                     src={item.image}
@@ -47,8 +50,14 @@ const ShopByCategory = () => {
                     <div className="text-2xl text-[#070707] lato font-black mt-2">
                       {item.name}
                     </div>
-                    <div className="text-[#686868] flex-wrap">{item.description}</div>
-                    <motion.div whileHover={{scale:1.1}} whileTap={{scale:0.95}}  className="cursor-pointer select-none bg-gradient-to-b from-orange-400 to-orange-500 w-fit text-white text-lg flex items-center justify-center py-1 px-4 rounded-sm">
+                    <div className="text-[#686868] flex-wrap">
+                      {item.description}
+                    </div>
+                    <motion.div
+                      whileHover={{ scale: 1.1 }}
+                      whileTap={{ scale: 0.95 }}
+                      className="cursor-pointer select-none bg-gradient-to-b from-orange-400 to-orange-500 w-fit text-white text-lg flex items-center justify-center py-1 px-4 rounded-sm"
+                    >
                       See All
                     </motion.div>
                   </div>
