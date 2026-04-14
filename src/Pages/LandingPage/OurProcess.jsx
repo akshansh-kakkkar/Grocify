@@ -59,7 +59,7 @@ const OurProcess = () => {
                 </div>
                 </div>
                 <div>
-                  <h2 className="poppins text-xl font-bold">
+                  <h2 className="poppins lg:text-left  text-xl font-bold">
                     {Purposes[0].name}
                   </h2>
                   <p className="w-65 text-sm inter text-[#686868]">

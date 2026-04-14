@@ -14,6 +14,7 @@ const HomePage = () => {
     <Values />
     <DiscountBanner />
     <OurProcess />
+    <CustomersSaying />
     </>
   )
 }
