@@ -58,15 +58,15 @@ const CustomersSaying = () => {
     setCurrentIndex((prev) => [prev[prev.length - 1], ...prev.slice(0, -1)]);
   };
   return (
-    <div className="h-[70vh] mx-4">
-      <div className="flex flex-col mt-102 lg:mt-4 items-center mb-16">
+    <div className="mx-4">
+      <div className="flex flex-col pt-12 lg:mt-4 items-center">
         <h2 className="sm:text-4xl text-3xl tracking-widest poppins font-bold text-center">
           Customer <span className="text-orange-400">Saying</span>
         </h2>
-        <div className="bg-orange-400 w-24 mt-4 h-1 rounded-full"></div>
+        <div className="bg-orange-400 w-24 mt-2 h-1 rounded-full"></div>
       </div>
       <div className="overflow-hidden w-full">
-        <div className="flex justify-end mx-12 p-3  gap-5">
+        <div className="flex justify-end md:mx-12 p-3  gap-5">
           <motion.button
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.95 }}
