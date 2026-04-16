@@ -62,7 +62,7 @@ const MilknEggsPage = () => {
   return (
     <>
       <div className=" relative h-[50vh] w-full">
-        <div className="bg-[url('/assets/seafood-banner.webp')]  bg-cover bg-center w-full h-full"></div>
+        <div className="bg-[url('/assets/dairy-banner.webp')]  bg-cover bg-center w-full h-full"></div>
         <div className="bg-black/50 absolute inset-0"></div>
         <div className=" absolute inset-0 flex justify-center   items-center text-center w-full h-full">
           <h2 className="bg-white sm:text-4xl text-2xl p-3 rounded-2xl inter font-bold text-orange-400 ">
