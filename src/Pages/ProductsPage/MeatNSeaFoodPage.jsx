@@ -2,46 +2,19 @@ import React from "react";
 import { motion } from "framer-motion";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlus, faHeart } from "@fortawesome/free-solid-svg-icons";
+import products from "../../data/MilkProducts.json"
+
 const MeatNSeaFoodPage = () => {
-  const MeatandSeaFood = [
-    {
-      id: 1,
-      name: "Beef",
-      image: "/assets/beef.webp",
-      price: 12,
-    },
-    {
-      id: 2,
-      name: "Chicken-Breast",
-      image: "/assets/chicken-breast.webp",
-      price: 7,
-    },
-    {
-      id: 3,
-      name: "Salmon",
-      image: "/assets/salmon.webp",
-      price: 8,
-    },
-    {
-      id: 4,
-      name: "Shrimp",
-      image: "/assets/shrimp.webp",
-      price: 12,
-    },
-    {
-      id: 5,
-      name: "Tilapia",
-      image: "/assets/tilapia.webp",
-      price: 10,
-    },
-  ];
+  const MeatandSeaFood = products.filter(
+    (item)=> item.category === "meat-products"
+  )
   return (
     <>
       <div className=" relative h-[50vh] w-full">
         <div className="bg-[url('/assets/seafood-banner.webp')]  bg-cover bg-center w-full h-full"></div>
         <div className="bg-black/50 absolute inset-0"></div>
         <div className=" absolute inset-0 flex justify-center   items-center text-center w-full h-full">
-          <h2 className="bg-white sm:text-4xl text-2xl p-3 rounded-2xl inter font-bold text-orange-400 ">
+          <h2 className="bg-white sm:text-4xl text-2xl p-3 rounded-2xl inter font-bold text-black ">
             Meat & SeaFood{" "}
           </h2>
         </div>

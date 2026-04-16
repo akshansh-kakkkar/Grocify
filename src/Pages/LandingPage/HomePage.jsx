@@ -5,6 +5,7 @@ import Values from './Values'
 import DiscountBanner from '../../components/DiscountBanner'
 import OurProcess from './OurProcess'
 import CustomersSaying from './CustomersSaying'
+import OurPrducts from './OurPrducts'
 
 const HomePage = () => {
   return (
@@ -12,6 +13,7 @@ const HomePage = () => {
     <HeroSection />
     <ShopByCategory />
     <Values />
+    <OurPrducts />
     <DiscountBanner />
     <OurProcess />
     <CustomersSaying />

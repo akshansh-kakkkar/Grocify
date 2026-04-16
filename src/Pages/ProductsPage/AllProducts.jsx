@@ -1,26 +1,25 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import products from "../../data/MilkProducts.json"
 import { faPlus, faHeart } from "@fortawesome/free-solid-svg-icons";
-const MilknEggsPage = () => {
-  const MilkandEggs = products.filter(
-    (item)=>item.category === "Milk-products"
-  )
+import products from "../../data/MilkProducts.json"
+
+const AllProducts = () => {
+  const AllProducts = products
   return (
     <>
       <div className=" relative h-[50vh] w-full">
-        <div className="bg-[url('/assets/dairy-banner.webp')]  bg-cover bg-center w-full h-full"></div>
+        <div className="bg-[url('/assets/all-banner.webp')]  bg-cover bg-center w-full h-full"></div>
         <div className="bg-black/50 absolute inset-0"></div>
         <div className=" absolute inset-0 flex justify-center   items-center text-center w-full h-full">
-          <h2 className="bg-white sm:text-4xl text-2xl p-3 rounded-2xl inter font-bold text-orange-400 ">
-            Milk & Eggs{" "}
+          <h2 className="bg-white sm:text-4xl text-2xl p-3 rounded-2xl inter font-bold text-black ">
+            Our Products
           </h2>
         </div>
       </div>
 
       <div className="grid lg::grid-cols-3 md:grid-cols-2 sm:grid-cols-1 xl:grid-cols-4 place-items-center gap-6 md:mx-24 my-12">
-        {MilkandEggs.map((item) => (
+        {AllProducts.map((item) => (
           <div key={item.id}>
             <div className="bg-gray-100 px-4 w-[250px] rounded-xl flex justify-center items-center flex-col h-[400px]">
               <div className="flex justify-between w-full">
@@ -67,4 +66,4 @@ const MilknEggsPage = () => {
   );
 };
 
-export default MilknEggsPage;
+export default AllProducts;

@@ -1,75 +1,12 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlus, faHeart } from "@fortawesome/free-solid-svg-icons";
 import { motion } from "framer-motion";
+import products from "../../data/MilkProducts.json"
+import { useEffect } from "react";
 const FruitsNVeggiesPage = () => {
-  const FruitsAndVegetables = [
-    {
-      id: 1,
-      name: "Banana",
-      image: "/assets/banana.webp",
-      price: 4,
-    },
-    {
-      id: 2,
-      name: "Broccoli",
-      image: "/assets/broccoli.webp",
-      price: 6,
-    },
-    {
-      id: 3,
-      name: "Cabbage",
-      image: "/assets/cabbage.webp",
-      price: 2,
-    },
-    {
-      id: 4,
-      name: "Capsicum",
-      image: "/assets/capsicum.webp",
-      price: 5,
-    },
-    {
-      id: 5,
-      name: "Egg Plant",
-      image: "/assets/eggplant.webp",
-      price: 6,
-    },
-    {
-      id: 6,
-      name: "Grapes",
-      image: "/assets/grapes.webp",
-      price: 7,
-    },
-    {
-      id: 7,
-      name: "Kale",
-      image: "/assets/kale.webp",
-      price: 5,
-    },
-    {
-      id: 8,
-      name: "Kiwi",
-      image: "/assets/kiwi.webp",
-      price: 2,
-    },
-    {
-      id: 9,
-      name: "Lettuce",
-      image: "/assets/lettuce.webp",
-      price: 4,
-    },
-    {
-      id: 10,
-      name: "Pineapple",
-      image: "/assets/pineapple.webp",
-      price: 7,
-    },
-    {
-      id: 11,
-      name: "Strawberry",
-      image: "/assets/strawberry.webp",
-      price: 9,
-    },
-  ];
+  const FruitsAndVegetables = products.filter(
+    (item)=> item.category === "fruits-vegetables"
+  )
   return (
     <>
       <div className=" relative h-[50vh] w-full">
