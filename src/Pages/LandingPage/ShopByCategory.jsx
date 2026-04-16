@@ -2,7 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 const ShopByCategory = () => {
-  const navigate = useNavigate()
+  const navigate = useNavigate();
   const types = [
     {
       id: 1,
@@ -10,6 +10,7 @@ const ShopByCategory = () => {
       description:
         "It is a long established fact that a reader will  be distracted by the readable.",
       image: "/assets/fruits-and-veggies.webp",
+      route: "/fruitsnveggies",
     },
     {
       id: 2,
@@ -17,6 +18,7 @@ const ShopByCategory = () => {
       description:
         "It is a long established fact that a reader will  be distracted by the readable.",
       image: "/assets/dairy-and-eggs.webp",
+      route : '/dairyneggs'
     },
     {
       id: 3,
@@ -24,6 +26,7 @@ const ShopByCategory = () => {
       description:
         "It is a long established fact that a reader will  be distracted by the readable.",
       image: "/assets/meat-and-seafood.webp",
+      route: "/meatnseafood",
     },
   ];
   return (
@@ -56,7 +59,7 @@ const ShopByCategory = () => {
                       {item.description}
                     </div>
                     <motion.div
-                    onClick={()=>navigate('/fruitsnveggies')}
+                      onClick={() => navigate(item.route)}
                       whileHover={{ scale: 1.1 }}
                       whileTap={{ scale: 0.95 }}
                       className="cursor-pointer select-none bg-gradient-to-b from-orange-400 to-orange-500 w-fit text-white text-lg flex items-center justify-center py-1 px-4 rounded-sm"

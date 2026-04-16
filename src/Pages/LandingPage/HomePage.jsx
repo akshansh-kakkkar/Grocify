@@ -5,7 +5,6 @@ import Values from './Values'
 import DiscountBanner from '../../components/DiscountBanner'
 import OurProcess from './OurProcess'
 import CustomersSaying from './CustomersSaying'
-import Footer from '../../components/Footer'
 
 const HomePage = () => {
   return (
@@ -16,7 +15,6 @@ const HomePage = () => {
     <DiscountBanner />
     <OurProcess />
     <CustomersSaying />
-    <Footer />
     </>
   )
 }
