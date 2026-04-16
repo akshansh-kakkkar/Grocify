@@ -1,6 +1,8 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 const ShopByCategory = () => {
+  const navigate = useNavigate()
   const types = [
     {
       id: 1,
@@ -54,6 +56,7 @@ const ShopByCategory = () => {
                       {item.description}
                     </div>
                     <motion.div
+                    onClick={()=>navigate('/fruitsnveggies')}
                       whileHover={{ scale: 1.1 }}
                       whileTap={{ scale: 0.95 }}
                       className="cursor-pointer select-none bg-gradient-to-b from-orange-400 to-orange-500 w-fit text-white text-lg flex items-center justify-center py-1 px-4 rounded-sm"

@@ -3,6 +3,7 @@ import { faMedal, faSeedling } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBuilding, faTruck } from "@fortawesome/free-regular-svg-icons";
 import { motion } from "framer-motion";
+
 const OurProcess = () => {
   const Purposes = [
     {
