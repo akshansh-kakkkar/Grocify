@@ -9,19 +9,19 @@ import ScrollToTop from "./scroll/ScrollToTop";
 import AllProducts from "./Pages/ProductsPage/AllProducts";
 import FavoritesPage from "./Pages/ProductsPage/FavoritesPage";
 function App() {
-  return(
+  return (
     <>
-    <Navbar />
-    <ScrollToTop />
-    <Routes>
-      <Route path="/" element={<HomePage   />} />
-      <Route path='/fruitsnveggies' element={<FruitsNVeggiesPage /> }/>
-      <Route path='/meatnseafood' element={<MeatNSeaFoodPage/>}/>
-      <Route path="/dairyneggs" element={<MilknEggsPage />} />
-      <Route path="/all-products" element={<AllProducts/>}/>
-      <Route path="/favorites" element={<FavoritesPage />} />
-    </Routes>
-    <Footer />
+      <Navbar />
+      <ScrollToTop />
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path='/fruitsnveggies' element={<FruitsNVeggiesPage />} />
+        <Route path='/meatnseafood' element={<MeatNSeaFoodPage />} />
+        <Route path="/dairyneggs" element={<MilknEggsPage />} />
+        <Route path="/all-products" element={<AllProducts />} />
+        <Route path="/favorites" element={<FavoritesPage />} />
+      </Routes>
+      <Footer />
     </>
   )
 }

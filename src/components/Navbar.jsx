@@ -12,14 +12,14 @@ import { motion, AnimatePresence } from "framer-motion";
 const Navbar = () => {
   const navigate = useNavigate();
   const [open, setOpen] = useState(false);
-    const [scrolled, setScrolled] = useState(false);
-    useEffect(()=>{
-      const handleScroll = ()=>{
-        setScrolled(window.scrollY > 10)
-      }
-      window.addEventListener('scroll', handleScroll)
-    },[])
-  
+  const [scrolled, setScrolled] = useState(false);
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 10)
+    }
+    window.addEventListener('scroll', handleScroll)
+  }, [])
+
   const active = ({ isActive }) => {
     return `${isActive ? " transition-all duration-300 text-orange-500" : ""}`;
   };
@@ -74,21 +74,21 @@ const Navbar = () => {
               </NavLink>
               <div>
                 <input
-            type="text"
-            placeholder="search..."
-            className="border-orange-400  font-medium inter placeholder:font-light placeholder:lato placeholder:text-gray-700 text-[#070707] border-2 py-2 w-63 px-4 rounded-full outline-orange-500  "
-          />
-          <div className=" bg-gradient-to-b from-orange-400 to-orange-500 absolute right-7  -translate-y-[42px] px-2 py-1 mx-1 rounded-full itemce justcne  ">
-            <FontAwesomeIcon
-              icon={faMagnifyingGlass}
-              style={{ color: "rgb(255, 255, 255)  " }}
-            />
-          </div>
+                  type="text"
+                  placeholder="search..."
+                  className="border-orange-400  font-medium inter placeholder:font-light placeholder:lato placeholder:text-gray-700 text-[#070707] border-2 py-2 w-63 px-4 rounded-full outline-orange-500  "
+                />
+                <div className=" bg-gradient-to-b from-orange-400 to-orange-500 absolute right-7  -translate-y-[42px] px-2 py-1 mx-1 rounded-full itemce justcne  ">
+                  <FontAwesomeIcon
+                    icon={faMagnifyingGlass}
+                    style={{ color: "rgb(255, 255, 255)  " }}
+                  />
+                </div>
               </div>
             </motion.div>
 
           </motion.div>
-          
+
         )}
 
       </AnimatePresence>
@@ -107,14 +107,14 @@ const Navbar = () => {
             />
           </div>
         </div>
-        <motion.div whileHover={{scale:1.1}} whileTap={{scale:0.95}} className="hover:bg-[#d3d3d34a] cursor-pointer transition-all duration-300 px-1 py-2 items-center flex rounded-full">
+        <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }} className="hover:bg-[#d3d3d34a] cursor-pointer transition-all duration-300 px-1 py-2 items-center flex rounded-full">
           <FontAwesomeIcon
             icon={faHeart}
-            onClick={()=>navigate('/favorites')}
+            onClick={() => navigate('/favorites')}
             style={{ color: "#262626", fontSize: "25px" }}
           />
         </motion.div>
-        <motion.div whileHover={{scale:1.1}} whileTap={{scale:0.95}} className="hover:bg-[#d3d3d34a] cursor-pointer transition-all duration-300 px-1 py-2 items-center flex rounded-full">
+        <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }} className="hover:bg-[#d3d3d34a] cursor-pointer transition-all duration-300 px-1 py-2 items-center flex rounded-full">
           <FontAwesomeIcon
             icon={faBagShopping}
             style={{ color: ` "#262626"`, fontSize: "25px" }}

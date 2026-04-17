@@ -6,9 +6,9 @@ import products from "../../data/AllProducts.json"
 import useFavorites from "../../hooks/FavouriteHook";
 
 const MeatNSeaFoodPage = () => {
-  const {favorites, toggleFavorite} = useFavorites()
+  const { favorites, toggleFavorite } = useFavorites()
   const MeatandSeaFood = products.filter(
-    (item)=> item.category === "meat-products"
+    (item) => item.category === "meat-products"
   )
   return (
     <>
@@ -33,8 +33,8 @@ const MeatNSeaFoodPage = () => {
                 >
                   <FontAwesomeIcon
                     icon={faHeart}
-                    onClick={()=>toggleFavorite(item.id)}
-                    className={`text-3xl cursor-pointer ${favorites.includes(item.id)? "text-red-500": "text-gray-200 hover:text-gray-300"}`}
+                    onClick={() => toggleFavorite(item.id)}
+                    className={`text-3xl cursor-pointer ${favorites.includes(item.id) ? "text-red-500" : "text-gray-200 hover:text-gray-300"}`}
                   />
                 </motion.div>
                 <motion.div

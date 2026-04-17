@@ -5,9 +5,9 @@ import products from "../../data/AllProducts.json"
 import { faPlus, faHeart } from "@fortawesome/free-solid-svg-icons";
 import useFavorites from "../../hooks/FavouriteHook";
 const MilknEggsPage = () => {
-  const {favorites, toggleFavorite} = useFavorites()
+  const { favorites, toggleFavorite } = useFavorites()
   const MilkandEggs = products.filter(
-    (item)=>item.category === "Milk-products"
+    (item) => item.category === "Milk-products"
   )
   return (
     <>
@@ -31,7 +31,7 @@ const MilknEggsPage = () => {
                   whileTap={{ scale: 0.95 }}
                 >
                   <FontAwesomeIcon
-                  onClick={()=>toggleFavorite(item.id)}
+                    onClick={() => toggleFavorite(item.id)}
                     icon={faHeart}
                     className={`text-3xl cursor-pointer ${favorites.includes(item.id) ? "text-red-500" : "text-gray-200 hover:text-gray-300"}`}
                   />

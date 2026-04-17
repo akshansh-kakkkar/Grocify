@@ -4,9 +4,9 @@ import { motion } from "framer-motion";
 import products from "../../data/AllProducts.json"
 import useFavorites from "../../hooks/FavouriteHook";
 const FruitsNVeggiesPage = () => {
-  const {favorites,toggleFavorite} = useFavorites()
+  const { favorites, toggleFavorite } = useFavorites()
   const FruitsAndVegetables = products.filter(
-    (item)=> item.category === "fruits-vegetables"
+    (item) => item.category === "fruits-vegetables"
   )
   return (
     <>
@@ -31,10 +31,10 @@ const FruitsNVeggiesPage = () => {
                 >
                   {" "}
                   <FontAwesomeIcon
-                  onClick={()=>toggleFavorite(item.id)}
+                    onClick={() => toggleFavorite(item.id)}
                     icon={faHeart}
 
-                    className={`text-3xl ${favorites.includes(item.id) ? "text-red-500": "text-gray-200 hover:text-gray-300"}`}
+                    className={`text-3xl ${favorites.includes(item.id) ? "text-red-500" : "text-gray-200 hover:text-gray-300"}`}
                   />
                 </motion.div>
                 <motion.div
