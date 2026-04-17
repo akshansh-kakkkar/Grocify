@@ -1,4 +1,4 @@
-import products from "../../data/MilkProducts.json";
+import products from "../../data/AllProducts.json";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { motion } from "framer-motion";
 import { faPlus, faHeart } from "@fortawesome/free-solid-svg-icons";

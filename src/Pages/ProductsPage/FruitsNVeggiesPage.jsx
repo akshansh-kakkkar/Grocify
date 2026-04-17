@@ -1,9 +1,10 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlus, faHeart } from "@fortawesome/free-solid-svg-icons";
 import { motion } from "framer-motion";
-import products from "../../data/MilkProducts.json"
-import { useEffect } from "react";
+import products from "../../data/AllProducts.json"
+import useFavorites from "../../hooks/FavouriteHook";
 const FruitsNVeggiesPage = () => {
+  const {favorites,toggleFavorite} = useFavorites()
   const FruitsAndVegetables = products.filter(
     (item)=> item.category === "fruits-vegetables"
   )
@@ -30,8 +31,10 @@ const FruitsNVeggiesPage = () => {
                 >
                   {" "}
                   <FontAwesomeIcon
+                  onClick={()=>toggleFavorite(item.id)}
                     icon={faHeart}
-                    className="text-gray-200 text-3xl hover:text-gray-300"
+
+                    className={`text-3xl ${favorites.includes(item.id) ? "text-red-500": "text-gray-200 hover:text-gray-300"}`}
                   />
                 </motion.div>
                 <motion.div

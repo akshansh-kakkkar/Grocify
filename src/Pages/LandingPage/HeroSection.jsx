@@ -1,6 +1,8 @@
 import { AnimatePresence, motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 
 const HeroSection = () => {
+  const navigate = useNavigate()
   return (
     <div className="flex flex-col lg:flex-row  md:gap-32 justify-center items-center mt-15 md:mt-29 lg:mx-22 ">
       <div className="flex justify-center items-center lg:items-start lg:text-left text-center flex-col gap-4 text-[#070707]">
@@ -16,7 +18,7 @@ const HeroSection = () => {
           all fresh and healthy.
         </div>
         <AnimatePresence>
-        <motion.button whileHover={{scale:1.1}} whileTap={{scale:0.95}} className="select-none cursor-pointer bg-gradient-to-b from-orange-400 to-orange-500 w-fit text-white text-2xl flex items-center justify-center py-2 px-6 rounded-sm">
+        <motion.button onClick={()=>navigate("/all-products")} whileHover={{scale:1.1}} whileTap={{scale:0.95}} className="select-none cursor-pointer bg-gradient-to-b from-orange-400 to-orange-500 w-fit text-white text-2xl flex items-center justify-center py-2 px-6 rounded-sm">
           Shop Now
         </motion.button>
         </AnimatePresence>

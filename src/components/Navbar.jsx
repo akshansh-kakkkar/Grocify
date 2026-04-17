@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import {
   faHeart,
   faBagShopping,
@@ -10,6 +10,7 @@ import {
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { motion, AnimatePresence } from "framer-motion";
 const Navbar = () => {
+  const navigate = useNavigate();
   const [open, setOpen] = useState(false);
     const [scrolled, setScrolled] = useState(false);
     useEffect(()=>{
@@ -25,7 +26,7 @@ const Navbar = () => {
   return (
     <div className={`flex py-4 px-2 md:px-12 items-center sticky top-0 bg-white z-120 text-center justify-between ${scrolled ? "shadow-lg" : ""}`}>
       <div className="text-3xl text-[#070707] inter tracking-widest font-bold">
-        Gr<span className="text-orange-500">O</span>cify
+        Gr<NavLink className="text-orange-500" to="/">O</NavLink>cify
       </div>
       <div className="gap-8 lg:translate-x-8  lg:flex hidden  poppins text-[#686868]">
         <NavLink className={active} to="/">
@@ -109,6 +110,7 @@ const Navbar = () => {
         <motion.div whileHover={{scale:1.1}} whileTap={{scale:0.95}} className="hover:bg-[#d3d3d34a] cursor-pointer transition-all duration-300 px-1 py-2 items-center flex rounded-full">
           <FontAwesomeIcon
             icon={faHeart}
+            onClick={()=>navigate('/favorites')}
             style={{ color: "#262626", fontSize: "25px" }}
           />
         </motion.div>

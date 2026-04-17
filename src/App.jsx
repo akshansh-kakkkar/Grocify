@@ -7,6 +7,7 @@ import MilknEggsPage from "./Pages/ProductsPage/MilknEggsPage";
 import Footer from './components/Footer'
 import ScrollToTop from "./scroll/ScrollToTop";
 import AllProducts from "./Pages/ProductsPage/AllProducts";
+import FavoritesPage from "./Pages/ProductsPage/FavoritesPage";
 function App() {
   return(
     <>
@@ -18,6 +19,7 @@ function App() {
       <Route path='/meatnseafood' element={<MeatNSeaFoodPage/>}/>
       <Route path="/dairyneggs" element={<MilknEggsPage />} />
       <Route path="/all-products" element={<AllProducts/>}/>
+      <Route path="/favorites" element={<FavoritesPage />} />
     </Routes>
     <Footer />
     </>

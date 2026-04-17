@@ -2,9 +2,11 @@ import React from "react";
 import { motion } from "framer-motion";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlus, faHeart } from "@fortawesome/free-solid-svg-icons";
-import products from "../../data/MilkProducts.json"
+import products from "../../data/AllProducts.json"
+import useFavorites from "../../hooks/FavouriteHook";
 
 const MeatNSeaFoodPage = () => {
+  const {favorites, toggleFavorite} = useFavorites()
   const MeatandSeaFood = products.filter(
     (item)=> item.category === "meat-products"
   )
@@ -20,7 +22,7 @@ const MeatNSeaFoodPage = () => {
         </div>
       </div>
 
-      <div className="grid lg::grid-cols-3 md:grid-cols-2 sm:grid-cols-1 xl:grid-cols-4 place-items-center gap-6 md:mx-24 my-12">
+      <div className="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 xl:grid-cols-4 place-items-center gap-6 md:mx-24 my-12">
         {MeatandSeaFood.map((item) => (
           <div key={item.id}>
             <div className="bg-gray-100 px-4 w-[250px] rounded-xl flex justify-center items-center flex-col h-[400px]">
@@ -31,7 +33,8 @@ const MeatNSeaFoodPage = () => {
                 >
                   <FontAwesomeIcon
                     icon={faHeart}
-                    className="text-gray-200 text-3xl hover:text-gray-300"
+                    onClick={()=>toggleFavorite(item.id)}
+                    className={`text-3xl cursor-pointer ${favorites.includes(item.id)? "text-red-500": "text-gray-200 hover:text-gray-300"}`}
                   />
                 </motion.div>
                 <motion.div

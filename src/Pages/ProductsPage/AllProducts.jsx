@@ -2,10 +2,12 @@ import React from "react";
 import { motion } from "framer-motion";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlus, faHeart } from "@fortawesome/free-solid-svg-icons";
-import products from "../../data/MilkProducts.json"
+import products from "../../data/AllProducts.json";
+import useFavorites from "../../hooks/FavouriteHook";
 
 const AllProducts = () => {
-  const AllProducts = products
+  const AllProducts = products;
+  const { favorites, toggleFavorite } = useFavorites();
   return (
     <>
       <div className=" relative h-[50vh] w-full">
@@ -29,13 +31,14 @@ const AllProducts = () => {
                 >
                   <FontAwesomeIcon
                     icon={faHeart}
-                    className="text-gray-200 text-3xl hover:text-gray-300"
+                    className={`text-3xl cursor-pointer  ${favorites.includes(item.id) ? "text-red-500":"text-gray-200 hover:text-gray-300"}  `}
+                    onClick={() => toggleFavorite(item.id)}
                   />
                 </motion.div>
                 <motion.div
                   whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.95 }}
-                  className="bg-gradient-to-b from-orange-400 h-fit items-center flex to-orange-500 p-1 rounded-lg"
+                  className={`bg-gradient-to-b from-orange-400 h-fit items-center flex to-orange-500 p-1 rounded-lg `}
                 >
                   <FontAwesomeIcon
                     icon={faPlus}

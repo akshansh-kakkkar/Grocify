@@ -1,9 +1,11 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import products from "../../data/MilkProducts.json"
+import products from "../../data/AllProducts.json"
 import { faPlus, faHeart } from "@fortawesome/free-solid-svg-icons";
+import useFavorites from "../../hooks/FavouriteHook";
 const MilknEggsPage = () => {
+  const {favorites, toggleFavorite} = useFavorites()
   const MilkandEggs = products.filter(
     (item)=>item.category === "Milk-products"
   )
@@ -29,8 +31,9 @@ const MilknEggsPage = () => {
                   whileTap={{ scale: 0.95 }}
                 >
                   <FontAwesomeIcon
+                  onClick={()=>toggleFavorite(item.id)}
                     icon={faHeart}
-                    className="text-gray-200 text-3xl hover:text-gray-300"
+                    className={`text-3xl cursor-pointer ${favorites.includes(item.id) ? "text-red-500" : "text-gray-200 hover:text-gray-300"}`}
                   />
                 </motion.div>
                 <motion.div
