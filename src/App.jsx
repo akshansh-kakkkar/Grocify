@@ -8,6 +8,7 @@ import Footer from './components/Footer'
 import ScrollToTop from "./scroll/ScrollToTop";
 import AllProducts from "./Pages/ProductsPage/AllProducts";
 import FavoritesPage from "./Pages/ProductsPage/FavoritesPage";
+import { Cart } from "./Pages/CartPage/Cart";
 function App() {
   return (
     <>
@@ -20,6 +21,7 @@ function App() {
         <Route path="/dairyneggs" element={<MilknEggsPage />} />
         <Route path="/all-products" element={<AllProducts />} />
         <Route path="/favorites" element={<FavoritesPage />} />
+        <Route path="/cart" element={<Cart />} />
       </Routes>
       <Footer />
     </>
