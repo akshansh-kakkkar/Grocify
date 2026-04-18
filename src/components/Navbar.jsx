@@ -25,9 +25,9 @@ const Navbar = () => {
   };
   return (
     <div className={`flex py-4 px-2 md:px-12 items-center sticky top-0 bg-white z-120 text-center justify-between ${scrolled ? "shadow-lg" : ""}`}>
-      <div className="text-3xl text-[#070707] inter tracking-widest font-bold">
-        Gr<NavLink className="text-orange-500" to="/">O</NavLink>cify
-      </div>
+      <NavLink to="/" className="text-3xl text-[#070707] inter tracking-widest font-bold">
+        Gr<span className="text-orange-500">O</span>cify
+      </NavLink>
       <div className="gap-8 lg:translate-x-8  lg:flex hidden  poppins text-[#686868]">
         <NavLink className={active} to="/">
           Home
