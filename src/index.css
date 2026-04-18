@@ -17,3 +17,28 @@
 html{
   scroll-behavior: smooth;
 }
+
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, #fb923c, #f97316);
+  border-radius: 10px;
+  border: 2px solid #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(to bottom, #f97316, #ea580c);
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #fb923c #f1f1f1;
+}
