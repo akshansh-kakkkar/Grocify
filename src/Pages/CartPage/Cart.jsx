@@ -22,51 +22,51 @@ export const Cart = () => {
   const delivery = subTotal > 0 ? 5 : 0;
   const total = subTotal + delivery;
   return (
-    <div className="h-[85vh] mx-12 mb-12  flex  ">
+    <div className="h-full md:mx-12 mb-12  flex items-center flex-col lg:flex-row ">
       <div>
         <div className="flex items-center ">
-          <div className="m-16 ml-24 max-h-[78vh] rounded-4xl overflow-y-auto gap-6 flex flex-col pr-4">
+          <div className="md:m-16  max-h-[78vh] rounded-4xl overflow-y-auto gap-6 flex flex-col pr-4">
             {cartProducts.map((item) => {
               const cartIncludes = cart.find(
                 (c) => String(c.id) === String(item.id),
               );
               return (
-                <div className="bg-gray-100 w-[800px] h-[120px]  rounded-xl grid grid-cols-[100px_1fr_200px_60px] items-center p-3">
+                <div className="bg-gray-100 xl:min-w-[900px]  xl:max-w-[1200px] lg:max-w-[1000px] lg:min-w-[600px] sm:h-[120px] flex-flex-col  rounded-xl sm:grid flex justify-between w-full gap-5 sm:grid-cols-[100px_1fr_200px_60px] items-center py-2 px-2 sm:p-3">
                   <div className="flex items-center gap-4">
                     <img
                       src={item.image}
                       alt={item.name}
-                      className="bg-white rounded-xl w-[100px] h-[100px]"
+                      className="bg-white rounded-xl sm:w-[100px] h-[100px]"
                     />
                   </div>
                   <div className="flex flex-col items-center">
-                    <div className="text-2xl font-bold poppins text-orange-400">
+                    <div className="md:text-2xl text-sm sm:text-lg font-bold poppins text-orange-400">
                       {item.name}
                     </div>
-                    <div className="text-2xl font-bold poppins text-[#070707]">
+                    <div className="sm:text-2xl text-md font-bold poppins text-[#070707]">
                       ${item.price}
                     </div>
                   </div>
-                  <div className="flex justify-around  mx-4 items-center gap-4">
+                  <div className="flex md:justify-around gap-2  md:mx-4 items-center md:gap-4">
                     <motion.button
                       whileHover={{ scale: 1.08 }}
                       onClick={() => decreaseQty(item.id)}
                       whileTap={{ scale: 0.95 }}
-                      className="text-white rounded-lg cursor-pointer poppins font-medium text-lg bg-gradient-to-b from-orange-400 to-orange-500 w-fit px-2 py-1"
+                      className="text-white rounded-lg cursor-pointer poppins font-medium text-sm md:text-lg bg-gradient-to-b from-orange-400 to-orange-500 w-fit px-2 py-1"
                     >
                       <FontAwesomeIcon
                         icon={faMinus}
                         className="text-white text-md"
                       />
                     </motion.button>
-                    <div className="text-white rounded-lg poppins  items-center px-5 py-1 justify-center text-center text-2xl inter font-bold bg-gradient-to-b from-orange-400 to-orange-500 w-full">
+                    <div className="text-white rounded-lg poppins  items-center px-2 md:px-5 md:py-1 justify-center text-center text-lg lg:text-2xl inter font-bold bg-gradient-to-b from-orange-400 to-orange-500 md:w-full">
                       {cartIncludes.quantity}
                     </div>
                     <motion.button
                       whileHover={{ scale: 1.08 }}
                       onClick={() => addItemToCart(item.id)}
                       whileTap={{ scale: 0.95 }}
-                      className="text-white w-fit  cursor-pointer px-2 rounded-lg poppins font-medium text-lg bg-gradient-to-b from-orange-400 to-orange-500  py-1"
+                      className="text-white w-fit  cursor-pointer px-2 rounded-lg poppins font-medium text-sm md:text-lg bg-gradient-to-b from-orange-400 to-orange-500  py-1"
                     >
                       <FontAwesomeIcon
                         icon={faPlus}
@@ -79,11 +79,11 @@ export const Cart = () => {
                       onClick={() => removeItem(item.id)}
                       whileHover={{ scale: 1.1 }}
                       whileTap={{ scale: 0.95 }}
-                      className={`bg-gradient-to-b cursor-pointer w-fit from-red-500 py-2 h-fit items-center flex to-red-400 p-1 rounded-lg `}
+                      className={`bg-gradient-to-b cursor-pointer w-fit from-red-500  px-1 py-2 md:py-2 h-fit items-center flex to-red-400 p-1 rounded-lg `}
                     >
                       <FontAwesomeIcon
                         icon={faTrash}
-                        className="text-white text-xl"
+                        className="text-white text-xl md:text-xl"
                       />
                     </motion.div>
                   </div>
@@ -94,7 +94,7 @@ export const Cart = () => {
         </div>
       </div>
 
-      <div className="bg-gray-100 w-[400px] max-h-[600px] ml-1 rounded-xl mt-12 pb-6">
+      <div className="bg-gray-100 sm:w-[400px] max-h-[600px] ml-1 rounded-xl mt-12 pb-6">
         <h2 className="flex justify-center w-full mt-6 text-3xl font-semibold poppins text-[#070707]">
           ORDER SUMMARY
         </h2>
