@@ -4,7 +4,7 @@ import HomePage from "./Pages/LandingPage/HomePage";
 import FruitsNVeggiesPage from "./Pages/ProductsPage/FruitsNVeggiesPage";
 import MeatNSeaFoodPage from "./Pages/ProductsPage/MeatNSeaFoodPage";
 import MilknEggsPage from "./Pages/ProductsPage/MilknEggsPage";
-import Footer from './components/Footer'
+import Footer from "./components/Footer";
 import ScrollToTop from "./scroll/ScrollToTop";
 import AllProducts from "./Pages/ProductsPage/AllProducts";
 import FavoritesPage from "./Pages/ProductsPage/FavoritesPage";
@@ -16,8 +16,8 @@ function App() {
       <ScrollToTop />
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path='/fruitsnveggies' element={<FruitsNVeggiesPage />} />
-        <Route path='/meatnseafood' element={<MeatNSeaFoodPage />} />
+        <Route path="/fruitsnveggies" element={<FruitsNVeggiesPage />} />
+        <Route path="/meatnseafood" element={<MeatNSeaFoodPage />} />
         <Route path="/dairyneggs" element={<MilknEggsPage />} />
         <Route path="/all-products" element={<AllProducts />} />
         <Route path="/favorites" element={<FavoritesPage />} />
@@ -25,7 +25,7 @@ function App() {
       </Routes>
       <Footer />
     </>
-  )
+  );
 }
 
 export default App;

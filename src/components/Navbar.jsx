@@ -32,14 +32,14 @@ const Navbar = () => {
         <NavLink className={active} to="/">
           Home
         </NavLink>
-        <NavLink className={active} to="/about">
-          About Us
+        <NavLink className={active} to="/category">
+          Category
         </NavLink>
-        <NavLink className={active} to="/process">
-          Process
+        <NavLink className={active} to="/">
+          Products
         </NavLink>
         <NavLink className={active} to="/contact">
-          Contact Us
+         Contact
         </NavLink>
       </div>
 

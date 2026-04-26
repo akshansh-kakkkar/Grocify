@@ -74,7 +74,7 @@ const AllProducts = () => {
                   )}
                 </div>
                 <img
-                  className="w-[200px] h-[200px] object-cover"
+                  className="w-[200px] cursor-pointer hover:scale-[105%] transition-all duration-300 h-[200px] object-cover"
                   src={item.image}
                   alt={item.name}
                 />

@@ -1,4 +1,6 @@
 import React from "react";
+import emailjs from "@emailjs/browser";
+
 import {
   faAngleLeft,
   faAngleRight,
@@ -6,6 +8,10 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 const Footer = () => {
+  const sendEmail = (e) => {
+    e.preventDefault();
+    emailjs.sendForm()
+  };
   return (
     <div className="w-full  bg-gray-100">
       <div className="p-12 lg:grid lg:grid-cols-4 flex flex-col   text-center    ">

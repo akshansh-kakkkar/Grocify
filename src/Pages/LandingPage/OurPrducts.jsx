@@ -71,7 +71,7 @@ const OurPrducts = () => {
                   )}
                 </div>
                 <img
-                  className="w-[200px] h-[200px] object-cover"
+                  className="hover:scale-[105%] transition-all duration-300 cursor-pointer w-[200px] h-[200px] object-cover"
                   src={item.image}
                   alt={item.name}
                 />

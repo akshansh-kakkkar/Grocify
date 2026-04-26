@@ -53,12 +53,12 @@ const OurProcess = () => {
               </div>
               <div className="flex gap-5 mt-2 ">
                 <div>
-                <motion.div whileHover={{scale:1.1}} whileTap={{scale:0.95}} className="bg-gradient-to-b from-orange-400 to-orange-500 w-16 h-16 items-center justify-center flex rounded-full">
-                  <FontAwesomeIcon
-                    icon={Purposes[0].icon}
-                    className="text-white text-3xl"
-                  />
-                </motion.div>
+                  <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }} className="bg-gradient-to-b from-orange-400 to-orange-500 w-16 h-16 items-center justify-center flex rounded-full">
+                    <FontAwesomeIcon
+                      icon={Purposes[0].icon}
+                      className="text-white text-3xl"
+                    />
+                  </motion.div>
                 </div>
                 <div>
                   <h2 className="poppins lg:text-left  text-xl font-bold">
@@ -85,12 +85,12 @@ const OurProcess = () => {
               </div>
               <div className="flex gap-5 mt-2 ">
                 <div>
-                <motion.div whileHover={{scale:1.1}} whileTap={{scale:0.95}} className="bg-gradient-to-b from-orange-400 to-orange-500 w-16 h-16 items-center justify-center flex rounded-full">
-                  <FontAwesomeIcon
-                    icon={Purposes[1].icon}
-                    className="text-white text-3xl"
-                  />
-                </motion.div>
+                  <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }} className="bg-gradient-to-b from-orange-400 to-orange-500 w-16 h-16 items-center justify-center flex rounded-full">
+                    <FontAwesomeIcon
+                      icon={Purposes[1].icon}
+                      className="text-white text-3xl"
+                    />
+                  </motion.div>
                 </div>
                 <div>
                   <h2 className="poppins text-xl font-bold">
@@ -117,12 +117,12 @@ const OurProcess = () => {
               </div>
               <div className="flex gap-5 mt-2 ">
                 <div>
-                <motion.div whileHover={{scale:1.1}} whileTap={{scale:0.95}} className="bg-gradient-to-b from-orange-400 to-orange-500 w-16 h-16 items-center justify-center flex rounded-full">
-                  <FontAwesomeIcon
-                    icon={Purposes[2].icon}
-                    className="text-white text-3xl"
-                  />
-                </motion.div>
+                  <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }} className="bg-gradient-to-b from-orange-400 to-orange-500 w-16 h-16 items-center justify-center flex rounded-full">
+                    <FontAwesomeIcon
+                      icon={Purposes[2].icon}
+                      className="text-white text-3xl"
+                    />
+                  </motion.div>
                 </div>
                 <div>
                   <motion.h2 className="poppins text-xl font-bold">
@@ -149,12 +149,12 @@ const OurProcess = () => {
 
               <div className="flex gap-5 mt-2 ">
                 <div>
-                <motion.div  whileHover={{scale:1.1}} whileTap={{scale:0.95}} className="bg-gradient-to-b from-orange-400 to-orange-500 w-16 h-16 items-center justify-center flex rounded-full">
-                  <FontAwesomeIcon
-                    icon={Purposes[3].icon}
-                    className="text-white text-3xl"
-                  />
-                </motion.div>
+                  <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }} className="bg-gradient-to-b from-orange-400 to-orange-500 w-16 h-16 items-center justify-center flex rounded-full">
+                    <FontAwesomeIcon
+                      icon={Purposes[3].icon}
+                      className="text-white text-3xl"
+                    />
+                  </motion.div>
                 </div>
                 <div>
                   <h2 className="poppins text-xl font-bold">
