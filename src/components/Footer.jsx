@@ -1,6 +1,5 @@
 import React from "react";
 import emailjs from "@emailjs/browser";
-
 import {
   faAngleLeft,
   faAngleRight,
@@ -10,10 +9,18 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 const Footer = () => {
   const sendEmail = (e) => {
     e.preventDefault();
-    emailjs.sendForm()
+    emailjs.sendForm(
+      import.meta.env.VITE_SERVICE_ID,
+      import.meta.VITE_TEMPLATE_ID,
+      form.current,
+      {
+        publicKey: import.meta.env.VITE_PUBLIC_KEY,
+      },
+    ).then;
   };
   return (
-    <div className="w-full  bg-gray-100">
+    <section id="/contact">
+          <div className="w-full  bg-gray-100">
       <div className="p-12 lg:grid lg:grid-cols-4 flex flex-col   text-center    ">
         <div className="col-span-1 flex gap-5 flex-col">
           <div className="text-3xl text-[#070707] text-left inter tracking-widest font-bold">
@@ -77,6 +84,8 @@ const Footer = () => {
         </div>
       </div>
     </div>
+    </section>
+
   );
 };
 

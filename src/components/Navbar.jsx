@@ -15,17 +15,22 @@ const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 10)
-    }
-    window.addEventListener('scroll', handleScroll)
-  }, [])
+      setScrolled(window.scrollY > 10);
+    };
+    window.addEventListener("scroll", handleScroll);
+  }, []);
 
   const active = ({ isActive }) => {
     return `${isActive ? " transition-all duration-300 text-orange-500" : ""}`;
   };
   return (
-    <div className={`flex py-4 px-2 md:px-12 items-center sticky top-0 bg-white z-120 text-center justify-between ${scrolled ? "shadow-lg" : ""}`}>
-      <NavLink to="/" className="text-3xl text-[#070707] inter tracking-widest font-bold">
+    <div
+      className={`flex py-4 px-2 md:px-12 items-center sticky top-0 bg-white z-120 text-center justify-between ${scrolled ? "shadow-lg" : ""}`}
+    >
+      <NavLink
+        to="/"
+        className="text-3xl text-[#070707] inter tracking-widest font-bold"
+      >
         Gr<span className="text-orange-500">O</span>cify
       </NavLink>
       <div className="gap-8 lg:translate-x-8  lg:flex hidden  poppins text-[#686868]">
@@ -35,11 +40,11 @@ const Navbar = () => {
         <NavLink className={active} to="/category">
           Category
         </NavLink>
-        <NavLink className={active} to="/">
+        <NavLink className={active} to="/products">
           Products
         </NavLink>
         <NavLink className={active} to="/contact">
-         Contact
+          Contact
         </NavLink>
       </div>
 
@@ -63,14 +68,14 @@ const Navbar = () => {
               <NavLink className={active} to="/">
                 Home
               </NavLink>
-              <NavLink className={active} to="/about">
-                About Us
+              <NavLink className={active} to="/category">
+                Category
               </NavLink>
-              <NavLink className={active} to="/process">
-                Process
+              <NavLink className={active} to="/products">
+                Products
               </NavLink>
               <NavLink className={active} to="/contact">
-                Contact Us
+                Contact
               </NavLink>
               <div>
                 <input
@@ -86,11 +91,8 @@ const Navbar = () => {
                 </div>
               </div>
             </motion.div>
-
           </motion.div>
-
         )}
-
       </AnimatePresence>
 
       <div className="flex items-center gap-3">
@@ -107,16 +109,24 @@ const Navbar = () => {
             />
           </div>
         </div>
-        <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }} className="hover:bg-[#d3d3d34a] cursor-pointer transition-all duration-300 px-1 py-2 items-center flex rounded-full">
+        <motion.div
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.95 }}
+          className="hover:bg-[#d3d3d34a] cursor-pointer transition-all duration-300 px-1 py-2 items-center flex rounded-full"
+        >
           <FontAwesomeIcon
             icon={faHeart}
-            onClick={() => navigate('/favorites')}
+            onClick={() => navigate("/favorites")}
             style={{ color: "#262626", fontSize: "25px" }}
           />
         </motion.div>
-        <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }} className="hover:bg-[#d3d3d34a] cursor-pointer transition-all duration-300 px-1 py-2 items-center flex rounded-full">
+        <motion.div
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.95 }}
+          className="hover:bg-[#d3d3d34a] cursor-pointer transition-all duration-300 px-1 py-2 items-center flex rounded-full"
+        >
           <FontAwesomeIcon
-          onClick={()=> navigate('/cart')}
+            onClick={() => navigate("/cart")}
             icon={faBagShopping}
             style={{ color: ` "#262626"`, fontSize: "25px" }}
           />

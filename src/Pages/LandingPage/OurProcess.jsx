@@ -32,6 +32,7 @@ const OurProcess = () => {
     },
   ];
   return (
+    <section id="/our-products">
     <div>
       <div className=" mx-12 flex flex-col">
         <h2 className='sm:text-4xl text-3xl tracking-widest poppins text-orange-400 mt-8 ml-12 font-bold text-center"'>
@@ -170,6 +171,7 @@ const OurProcess = () => {
         </div>
       </div>
     </div>
+    </section>
   );
 };
 

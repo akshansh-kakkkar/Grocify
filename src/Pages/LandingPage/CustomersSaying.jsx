@@ -57,7 +57,8 @@ const CustomersSaying = () => {
   const prevSlide = () => {
     setCurrentIndex((prev) => [prev[prev.length - 1], ...prev.slice(0, -1)]);
   };
-  return (
+  
+  return (<section id="/customer-saying">
     <div className="mx-4">
       <div className="flex flex-col pt-12 lg:mt-4 items-center">
         <h2 className="sm:text-4xl text-3xl tracking-widest poppins font-bold text-center">
@@ -130,6 +131,7 @@ const CustomersSaying = () => {
         </div>
       </div>
     </div>
+    </section>
   );
 };
 
