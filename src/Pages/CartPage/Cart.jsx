@@ -47,7 +47,7 @@ export const Cart = () => {
             whileTap={{ scale: 0.95 }}
             className="select-none cursor-pointer bg-gradient-to-b from-orange-400 to-orange-500 w-fit text-white text-2xl flex items-center justify-center py-2 px-6 rounded-sm"
           >
-            View Cart
+            View Products
           </motion.button>
         </div>
       ) : (
@@ -182,9 +182,11 @@ export const Cart = () => {
               </div>
             </div>
             <motion.div
-              onClick={() => navigate("/payment-gateway")}
+            
+              onClick={() => { clearCart();navigate("/payment-gateway")}}
               whileHover={{ scale: 0.95 }}
               whileTap={{ scale: 1.06 }}
+
               className="flex cursor-pointer justify-center items-center text-center poppins font-medium bg-gradient-to-b from-orange-400 to-orange-500 m-5 py-2 text-2xl rounded-lg text-white
           "
             >

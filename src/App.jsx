@@ -1,4 +1,4 @@
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, useLocation } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import HomePage from "./Pages/LandingPage/HomePage";
 import FruitsNVeggiesPage from "./Pages/ProductsPage/FruitsNVeggiesPage";
@@ -9,9 +9,23 @@ import ScrollToTop from "./scroll/ScrollToTop";
 import AllProducts from "./Pages/ProductsPage/AllProducts";
 import FavoritesPage from "./Pages/ProductsPage/FavoritesPage";
 import { Cart } from "./Pages/CartPage/Cart";
+import Payment from "./Pages/CartPage/Payment";
+import { useEffect, useState } from "react";
+import Loading from "./components/Loading";
+import { time } from "framer-motion";
 function App() {
+  const [isLoading, setIsLoading] = useState(false)
+  const location = useLocation();
+  useEffect(()=>{
+    setIsLoading(true);
+    const timer = setTimeout(() => {
+      setIsLoading(false)
+    }, 500);
+    return ()=>clearTimeout(timer)
+  }, [location])
   return (
     <>
+    {isLoading && <Loading />}
       <Navbar />
       <ScrollToTop />
       <Routes>
@@ -22,6 +36,7 @@ function App() {
         <Route path="/all-products" element={<AllProducts />} />
         <Route path="/favorites" element={<FavoritesPage />} />
         <Route path="/cart" element={<Cart />} />
+        <Route path="/payment-gateway" element={<Payment />} />
       </Routes>
       <Footer />
     </>
