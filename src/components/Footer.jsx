@@ -19,7 +19,7 @@ const Footer = () => {
     ).then;
   };
   return (
-    <section id="/contact">
+    <section id="contact">
           <div className="w-full  bg-gray-100">
       <div className="p-12 lg:grid lg:grid-cols-4 flex flex-col   text-center    ">
         <div className="col-span-1 flex gap-5 flex-col">
@@ -36,15 +36,29 @@ const Footer = () => {
           </p>
         </div>
         <div className="col-span-1 flex flex-col gap-5">
-          <h2 className="text-2xl text-[#070707] inter tracking-widest font-bold">
-            Company
+                    <h2 className="text-2xl text-[#070707] inter tracking-widest font-bold">
+            Support
           </h2>
-          <div className="text-center text-md font-medium poppins text-[#545454]">
-            About
-          </div>
-          <div className="text-center text-md font-medium poppins text-[#545454]">
-            FAQ'S
-          </div>
+        <a
+          href="#"
+        >
+          Home
+        </a>
+        <a
+          href="#category"
+        >
+          Category
+        </a>
+        <a
+          href="#our-products"
+        >
+          Products
+        </a>
+        <a
+          href="#reviews"
+        >
+          Reviews
+        </a>
         </div>
         <div className="col-span-1 flex flex-col gap-5">
           <h2 className="text-2xl text-[#070707] inter tracking-widest font-bold">

@@ -31,7 +31,7 @@ const ShopByCategory = () => {
   ];
   return (
     <>
-    <section id="/category">
+    <section id="category">
             <div className="lg:h-[65vh]">
         <div className="sm:text-4xl text-2xl tracking-widest mt-22 poppins font-bold flex justify-center ">
           <span className="text-orange-400">Shop&nbsp;</span> By Category

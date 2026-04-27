@@ -13,11 +13,23 @@ const Navbar = () => {
   const navigate = useNavigate();
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [activeSection, setActiveSection] = useState("");
   useEffect(() => {
+    const sections = document.querySelectorAll("section");
     const handleScroll = () => {
-      setScrolled(window.scrollY > 10);
+      let current = "";
+      sections.forEach((section) => {
+        const sectionTop = section.offsetTop - 100;
+        if (window.scrollY >= sectionTop) {
+          current = section.getAttribute("id");
+        }
+      });
+
+      setActiveSection(current);
     };
+    setScrolled(window.scrollY > 10);
     window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   const active = ({ isActive }) => {
@@ -34,18 +46,30 @@ const Navbar = () => {
         Gr<span className="text-orange-500">O</span>cify
       </NavLink>
       <div className="gap-8 lg:translate-x-8  lg:flex hidden  poppins text-[#686868]">
-        <NavLink className={active} to="/">
+        <a
+          className={activeSection === "" ? " text-orange-500" : " "}
+          href="#"
+        >
           Home
-        </NavLink>
-        <NavLink className={active} to="/category">
+        </a>
+        <a
+          className={activeSection === "category" ? " text-orange-500" : " "}
+          href="#category"
+        >
           Category
-        </NavLink>
-        <NavLink className={active} to="/products">
+        </a>
+        <a
+          className={activeSection === "our-products" ? " text-orange-500" : " "}
+          href="#our-products"
+        >
           Products
-        </NavLink>
-        <NavLink className={active} to="/contact">
-          Contact
-        </NavLink>
+        </a>
+        <a
+          className={activeSection === "reviews" ? " text-orange-500" : " "}
+          href="#reviews"
+        >
+          Reviews
+        </a>
       </div>
 
       <AnimatePresence>
@@ -65,18 +89,30 @@ const Navbar = () => {
               transition={{ type: "tween", duration: 0.3 }}
               className="flex text-xl fixed flex-col gap-6 left-0 inter font-medium text-[#070707] h-[350px] w-[300px] mt-23 bg-orange-200 backdrop-blur-2xl rounded-2xl items-center justify-center  ml-8 p-6 z-50"
             >
-              <NavLink className={active} to="/">
-                Home
-              </NavLink>
-              <NavLink className={active} to="/category">
-                Category
-              </NavLink>
-              <NavLink className={active} to="/products">
-                Products
-              </NavLink>
-              <NavLink className={active} to="/contact">
-                Contact
-              </NavLink>
+                 <a
+          className={activeSection === "" ? " text-orange-500" : " "}
+          href="#"
+        >
+          Home
+        </a>
+        <a
+          className={activeSection === "category" ? " text-orange-500" : " "}
+          href="#category"
+        >
+          Category
+        </a>
+        <a
+          className={activeSection === "our-products" ? " text-orange-500" : " "}
+          href="#our-products"
+        >
+          Products
+        </a>
+        <a
+          className={activeSection === "reviews" ? " text-orange-500" : " "}
+          href="#reviews"
+        >
+          Reviews
+        </a>
               <div>
                 <input
                   type="text"

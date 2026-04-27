@@ -17,7 +17,7 @@ const OurPrducts = () => {
   const { cart, removeItem, addItemToCart, decreaseQty } = useCart();
   return (
     <>
-    <section id="/our-products">
+    <section id="our-products">
       <div className="flex flex-col items-center mb-16">
         <h2 className="sm:text-4xl text-3xl tracking-widest poppins font-bold text-center">
           Our <span className="text-orange-400">Products</span>

@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 const HeroSection = () => {
   const navigate = useNavigate()
   return (
-    <section id="/">
+    <section id="">
     <div className="flex flex-col lg:flex-row  md:gap-32 justify-center items-center mt-15 md:mt-29 lg:mx-22 ">
       <div className="flex justify-center items-center lg:items-start lg:text-left text-center flex-col gap-4 text-[#070707]">
         <div className="bg-orange-200 lg rounded-2xl w-fit px-2 py-1 text-orange-500">
