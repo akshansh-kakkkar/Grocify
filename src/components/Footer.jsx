@@ -7,17 +7,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 const Footer = () => {
-  const sendEmail = (e) => {
-    e.preventDefault();
-    emailjs.sendForm(
-      import.meta.env.VITE_SERVICE_ID,
-      import.meta.VITE_TEMPLATE_ID,
-      form.current,
-      {
-        publicKey: import.meta.env.VITE_PUBLIC_KEY,
-      },
-    ).then;
-  };
+
   return (
     <section id="contact">
           <div className="w-full  bg-gray-100">
@@ -82,10 +72,12 @@ const Footer = () => {
             Questions or Feedback? We' d love to here from you.
           </p>
           <div className="flex">
+            
             <input
               className="bg-white rounded-l-xl p-3 outline-none"
               type="email"
               placeholder="Email Address"
+
             />
             <button className="bg-orange-400 px-2 rounded-r-xl">
               {" "}
@@ -94,6 +86,7 @@ const Footer = () => {
                 className="text-white text-3xl"
               />
             </button>
+            <form action=""></form>
           </div>
         </div>
       </div>

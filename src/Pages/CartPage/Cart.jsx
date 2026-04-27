@@ -10,8 +10,12 @@ import {
   faCartShopping,
 } from "@fortawesome/free-solid-svg-icons";
 import { useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
 
 export const Cart = () => {
+  const notify = toast.success("Order Placed ", {
+    autoClose: 1200
+  })
   const { cart, removeItem, addItemToCart, decreaseQty, clearCart } = useCart();
   const navigate = useNavigate();
   const cartProducts = cart.map((cartItem) => {

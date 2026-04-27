@@ -13,6 +13,7 @@ import Payment from "./Pages/CartPage/Payment";
 import { useEffect, useState } from "react";
 import Loading from "./components/Loading";
 import { time } from "framer-motion";
+import { ToastContainer } from "react-toastify";
 function App() {
   const [isLoading, setIsLoading] = useState(false)
   const location = useLocation();
@@ -25,11 +26,12 @@ function App() {
   }, [location])
   return (
     <>
-    {isLoading && <Loading />}
+    
       <Navbar />
       <ScrollToTop />
       <Routes>
         <Route path="/" element={<HomePage />} />
+        <Route element={isLoading && <Loading />} />
         <Route path="/fruitsnveggies" element={<FruitsNVeggiesPage />} />
         <Route path="/meatnseafood" element={<MeatNSeaFoodPage />} />
         <Route path="/dairyneggs" element={<MilknEggsPage />} />

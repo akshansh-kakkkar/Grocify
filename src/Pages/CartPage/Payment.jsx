@@ -1,5 +1,6 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+  const notify = toast.success("Order Placed Successfully")
 import {
   faPlus,
   faTruckFast,
@@ -9,6 +10,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import {motion} from 'framer-motion'
 import { useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
 const Payment = () => {
     const navigate = useNavigate()
   return (
