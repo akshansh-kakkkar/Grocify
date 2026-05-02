@@ -91,7 +91,7 @@ const AllProducts = () => {
                   alt={item.name}
                 />
                 <h2 className="text-2xl font-medium inter">{item.name}</h2>
-                <p className="inter font-bold text-xl">${item.price}</p>
+                <p className="inter font-bold text-xl">₹{item.price}</p>
                 {!cartIncludes ? (
                   <motion.button
                     whileHover={{ scale: 1.08 }}

@@ -13,9 +13,6 @@ import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 
 export const Cart = () => {
-  const notify = toast.success("Order Placed ", {
-    autoClose: 1200
-  })
   const { cart, removeItem, addItemToCart, decreaseQty, clearCart } = useCart();
   const navigate = useNavigate();
   const cartProducts = cart.map((cartItem) => {
@@ -34,26 +31,13 @@ export const Cart = () => {
   const total = subTotal + delivery;
   const handlePayment = async () => {
     try {
-      const backendBaseUrl = import.meta.env.VITE_DEPLOY_LINK;
-      const res = await fetch(`${backendBaseUrl}/pay/create-order`, {
+      const res = await fetch("http://localhost:3000/pay/create-order", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({ amount: total }),
       });
-      
-      if (!res.ok) {
-        const text = await res.text();
-        throw new Error(`Server responded with ${res.status}: ${text.slice(0, 100)}`);
-      }
-      
-      const contentType = res.headers.get("content-type");
-      if (!contentType || !contentType.includes("application/json")) {
-        const text = await res.text();
-        throw new Error(`Expected JSON but got ${contentType}: ${text.slice(0, 100)}`);
-      }
-
       const data = await res.json();
       const options = {
         key: import.meta.env.VITE_RAZORPAY_KEY,
@@ -63,9 +47,9 @@ export const Cart = () => {
         description: "Purchase",
         order_id: data.id,
         handler: function (response) {
-          alert("Payment successful");
-          console.log(response);
+          toast.success("Order Placed Successfully", { autoClose: 1200 });
           clearCart();
+          navigate("/payment-gateway");
         },
         theme: {
           color: "#f97316",
@@ -75,6 +59,7 @@ export const Cart = () => {
       rzp.open();
     } catch (error) {
       console.error("Payment failed", error);
+      toast.error("Payment initiation failed");
     }
   };
   return (
@@ -109,7 +94,7 @@ export const Cart = () => {
                     (c) => String(c.id) === String(item.id),
                   );
                   return (
-                    <div key={item.id} className="bg-gray-100 xl:min-w-[900px]  xl:max-w-[1200px] lg:max-w-[1000px] lg:min-w-[600px] sm:h-[120px] flex-flex-col  rounded-xl sm:grid flex justify-between w-full gap-5 sm:grid-cols-[100px_1fr_200px_60px] items-center py-2 px-2 sm:p-3">
+                    <div className="bg-gray-100 xl:min-w-[900px]  xl:max-w-[1200px] lg:max-w-[1000px] lg:min-w-[600px] sm:h-[120px] flex-flex-col  rounded-xl sm:grid flex justify-between w-full gap-5 sm:grid-cols-[100px_1fr_200px_60px] items-center py-2 px-2 sm:p-3">
                       <div className="flex items-center gap-4">
                         <img
                           src={item.image}
@@ -122,7 +107,7 @@ export const Cart = () => {
                           {item.name}
                         </div>
                         <div className="sm:text-2xl text-md font-bold poppins text-[#070707]">
-                          ${item.price}
+                         ₹{item.price}
                         </div>
                       </div>
                       <div className="flex md:justify-around gap-2  md:mx-4 items-center md:gap-4">
@@ -200,7 +185,7 @@ export const Cart = () => {
                     x{item.quantity}
                   </div>
                   <div className="text-lg w-7 font-bold inter text-[#070707]">
-                    ${item.price * item.quantity}
+                    ₹{item.price * item.quantity}
                   </div>
                 </div>
               ))}
@@ -213,7 +198,7 @@ export const Cart = () => {
                 Subtotal
               </h2>
               <div className="text-lg font-medium inter text-[#070707]">
-                ${subTotal}
+                ₹{subTotal}
               </div>
             </div>
             <div className="mx-8 flex mt- justify-between">
@@ -221,18 +206,18 @@ export const Cart = () => {
                 Delivery
               </h2>
               <div className="text-lg font-medium inter text-[#070707]">
-                ${delivery}
+                ₹{delivery}
               </div>
             </div>
             <div className="mx-8 flex mt-4 justify-between">
               <h2 className="text-xl font-bold inter text-[#070707]">Total</h2>
               <div className="text-xl font-bold inter text-[#070707]">
-                ${total}
+                ₹{total}
               </div>
             </div>
             <motion.div
             
-              onClick={() => { handlePayment() }}
+              onClick={() => handlePayment()}
               whileHover={{ scale: 0.95 }}
               whileTap={{ scale: 1.06 }}
 

@@ -13,6 +13,7 @@ import { useEffect, useState } from "react";
 import Loading from "./components/Loading";
 
 import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import SecondaryNavbar from "./components/SecondaryNavbar";
 function App() {
   const [isLoading, setIsLoading] = useState(false)
@@ -28,6 +29,7 @@ function App() {
     <>
       {isLoading && <Loading />}
       
+      <ToastContainer />
       <ScrollToTop />
       <Routes>
         <Route path="/" element={<HomePage />} />

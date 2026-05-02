@@ -3,21 +3,21 @@
       "id": 1,
       "name": "Butter",
       "image": "/assets/butter.webp",
-      "price": 6,
+      "price": 26,
       "category" : "Milk-products"
     },
     {
       "id": 2,
       "name": "Cheese",
       "image": "/assets/cheese.webp",
-      "price": 8,
+      "price": 48,
       "category": "Milk-products"
     },
     {
       "id": 3,
       "name": "Condensed Milk",
       "image": "/assets/condensed-milk.webp",
-      "price": 10,
+      "price": 90,
       "category" : "Milk-products"
     },
     {
@@ -31,49 +31,49 @@
       "id": 5,
       "name": "Milk",
       "image": "/assets/milk.webp",
-      "price": 12,
+      "price": 48,
       "category":"Milk-products"
     },
     {
       "id": 6,
       "name": "Ricotta Cheese",
       "image": "/assets/ricotta-cheese.webp",
-      "price": 8,
+      "price": 98,
       "category":"Milk-products"
     },
     {
       "id": 7,
       "name": "Cheese Slice",
       "image": "/assets/slice-cheese.webp",
-      "price": 5,
+      "price": 45,
       "category":"Milk-products"
     },
     {
       "id": 8,
       "name": "Tofu",
       "image": "/assets/tofu.webp",
-      "price": 8,
+      "price": 39,
       "category":"Milk-products"
     },
     {
       "id": 9,
       "name": "Yogurt",
       "image": "/assets/yogurt.webp",
-      "price": 12,
+      "price": 72,
         "category":"Milk-products"
     },
     {
       "id": 10,
       "name": "Beef",
       "image": "/assets/beef.webp",
-      "price": 12,
+      "price": 62,
       "category":"meat-products"
     },
     {
       "id": 11,
       "name": "Chicken-Breast",
       "image": "/assets/chicken-breast.webp",
-      "price": 7,
+      "price": 87,
       "category": "meat-products"
     },
     {
@@ -87,35 +87,35 @@
       "id": 13,
       "name": "Shrimp",
       "image": "/assets/shrimp.webp",
-      "price": 12,
+      "price": 92,
       "category":"meat-products"
     },
     {
       "id": 14,
       "name": "Tilapia",
       "image": "/assets/tilapia.webp",
-      "price": 10,
+      "price": 70,
       "category":"meat-products"
     },
      {
       "id": 15,
       "name": "Banana",
       "image": "/assets/banana.webp",
-      "price": 4,
+      "price": 94,
       "category": "fruits-vegetables"
     },
     {
       "id": 16,
       "name": "Broccoli",
       "image": "/assets/broccoli.webp",
-      "price": 6,
+      "price": 66,
       "category"  : "fruits-vegetables"
     },
     {
       "id": 17,
       "name": "Cabbage",
       "image": "/assets/cabbage.webp",
-      "price": 2,
+      "price": 32,
       "category":"fruits-vegetables"
     },
     {
@@ -129,14 +129,14 @@
       "id": 19,
       "name": "Egg Plant",
       "image": "/assets/eggplant.webp",
-      "price": 6,
+      "price": 66,
       "category":"fruits-vegetables"
     },
     {
       "id": 20,
       "name": "Grapes",
       "image": "/assets/grapes.webp",
-      "price": 7,
+      "price": 78,
       "category":"fruits-vegetables"
     },
     {
@@ -150,7 +150,7 @@
       "id": 22,
       "name": "Kiwi",
       "image": "/assets/kiwi.webp",
-      "price": 2,
+      "price": 29,
       "category":"fruits-vegetables"
     },
     {
@@ -164,14 +164,14 @@
       "id": 24,
       "name": "Pineapple",
       "image": "/assets/pineapple.webp",
-      "price": 7,
+      "price": 67,
       "category":"fruits-vegetables"
     },
     {
       "id": 25,
       "name": "Strawberry",
       "image": "/assets/strawberry.webp",
-      "price": 9,
+      "price": 99,
       "category":"fruits-vegetables"
     }
   ]
