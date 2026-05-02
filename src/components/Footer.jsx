@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import emailjs from "@emailjs/browser";
 import {
   faAngleLeft,
@@ -7,7 +7,25 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 const Footer = () => {
-
+  const form = useRef();
+  const sendMail= (e)=>{
+    e.preventDefault();
+    emailjs.sendForm(
+      import.meta.env.VITE_SERVICE_ID,
+      import.meta.env.VITE_TEMPLATE_ID,
+      form.current,
+      import.meta.env.VITE_PUBLIC_KEY
+    ).then(
+      (result)=>{
+        console.log("email sent", result.text)
+        alert("Check Your Mailbox")
+      },
+      (error)=>{
+        console.log("Error", error.text),
+        alert("Email Failed to Sent")
+      }
+    )
+  }
   return (
     <section id="contact">
           <div className="w-full  bg-gray-100">
@@ -71,23 +89,25 @@ const Footer = () => {
           <p className="text-left text-md poppins text-[#545454]">
             Questions or Feedback? We' d love to here from you.
           </p>
+          <form action="" ref={form} onSubmit={sendMail}>
           <div className="flex">
             
             <input
               className="bg-white rounded-l-xl p-3 outline-none"
               type="email"
+              name="user_email"
               placeholder="Email Address"
 
             />
-            <button className="bg-orange-400 px-2 rounded-r-xl">
+            <button type="submit" className="bg-orange-400 px-2 rounded-r-xl">
               {" "}
               <FontAwesomeIcon
                 icon={faAngleRight}
                 className="text-white text-3xl"
               />
             </button>
-            <form action=""></form>
           </div>
+          </form>
         </div>
       </div>
     </div>
