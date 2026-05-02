@@ -5,7 +5,7 @@ import paymentroute from './Routes/paymentroute.js';
 
 const app = express();
 app.use(cors({
-  origin: ["http://localhost:5173", "https://grocify-k8qr-72yqrs64s-akshansh-kakkkars-projects.vercel.app"],
+  origin: ["http://localhost:5173", "https://grocify-badf.vercel.app", "https://grocify-k8qr-72yqrs64s-akshansh-kakkkars-projects.vercel.app"],
   methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
   credentials: true
 }));
