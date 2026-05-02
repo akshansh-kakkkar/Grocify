@@ -1,0 +1,177 @@
+[
+    {
+      "id": 1,
+      "name": "Butter",
+      "image": "/assets/butter.webp",
+      "price": 6,
+      "category" : "Milk-products"
+    },
+    {
+      "id": 2,
+      "name": "Cheese",
+      "image": "/assets/cheese.webp",
+      "price": 8,
+      "category": "Milk-products"
+    },
+    {
+      "id": 3,
+      "name": "Condensed Milk",
+      "image": "/assets/condensed-milk.webp",
+      "price": 10,
+      "category" : "Milk-products"
+    },
+    {
+      "id": 4,
+      "name": "Eggs",
+      "image": "/assets/eggs.webp",
+      "price": 6,
+      "category":"Milk-products"
+    },
+    {
+      "id": 5,
+      "name": "Milk",
+      "image": "/assets/milk.webp",
+      "price": 12,
+      "category":"Milk-products"
+    },
+    {
+      "id": 6,
+      "name": "Ricotta Cheese",
+      "image": "/assets/ricotta-cheese.webp",
+      "price": 8,
+      "category":"Milk-products"
+    },
+    {
+      "id": 7,
+      "name": "Cheese Slice",
+      "image": "/assets/slice-cheese.webp",
+      "price": 5,
+      "category":"Milk-products"
+    },
+    {
+      "id": 8,
+      "name": "Tofu",
+      "image": "/assets/tofu.webp",
+      "price": 8,
+      "category":"Milk-products"
+    },
+    {
+      "id": 9,
+      "name": "Yogurt",
+      "image": "/assets/yogurt.webp",
+      "price": 12,
+        "category":"Milk-products"
+    },
+    {
+      "id": 10,
+      "name": "Beef",
+      "image": "/assets/beef.webp",
+      "price": 12,
+      "category":"meat-products"
+    },
+    {
+      "id": 11,
+      "name": "Chicken-Breast",
+      "image": "/assets/chicken-breast.webp",
+      "price": 7,
+      "category": "meat-products"
+    },
+    {
+      "id": 12,
+      "name": "Salmon",
+      "image": "/assets/salmon.webp",
+      "price": 8,
+      "category":"meat-products"
+    },
+    {
+      "id": 13,
+      "name": "Shrimp",
+      "image": "/assets/shrimp.webp",
+      "price": 12,
+      "category":"meat-products"
+    },
+    {
+      "id": 14,
+      "name": "Tilapia",
+      "image": "/assets/tilapia.webp",
+      "price": 10,
+      "category":"meat-products"
+    },
+     {
+      "id": 15,
+      "name": "Banana",
+      "image": "/assets/banana.webp",
+      "price": 4,
+      "category": "fruits-vegetables"
+    },
+    {
+      "id": 16,
+      "name": "Broccoli",
+      "image": "/assets/broccoli.webp",
+      "price": 6,
+      "category"  : "fruits-vegetables"
+    },
+    {
+      "id": 17,
+      "name": "Cabbage",
+      "image": "/assets/cabbage.webp",
+      "price": 2,
+      "category":"fruits-vegetables"
+    },
+    {
+      "id": 18,
+      "name": "Capsicum",
+      "image": "/assets/capsicum.webp",
+      "price": 5,
+      "category":"fruits-vegetables"
+    },
+    {
+      "id": 19,
+      "name": "Egg Plant",
+      "image": "/assets/eggplant.webp",
+      "price": 6,
+      "category":"fruits-vegetables"
+    },
+    {
+      "id": 20,
+      "name": "Grapes",
+      "image": "/assets/grapes.webp",
+      "price": 7,
+      "category":"fruits-vegetables"
+    },
+    {
+      "id": 21,
+      "name": "Kale",
+      "image": "/assets/kale.webp",
+      "price": 5,
+      "category":"fruits-vegetables"
+    },
+    {
+      "id": 22,
+      "name": "Kiwi",
+      "image": "/assets/kiwi.webp",
+      "price": 2,
+      "category":"fruits-vegetables"
+    },
+    {
+      "id": 23,
+      "name": "Lettuce",
+      "image": "/assets/lettuce.webp",
+      "price": 4,
+      "category":"fruits-vegetables"
+    },
+    {
+      "id": 24,
+      "name": "Pineapple",
+      "image": "/assets/pineapple.webp",
+      "price": 7,
+      "category":"fruits-vegetables"
+    },
+    {
+      "id": 25,
+      "name": "Strawberry",
+      "image": "/assets/strawberry.webp",
+      "price": 9,
+      "category":"fruits-vegetables"
+    }
+  ]
