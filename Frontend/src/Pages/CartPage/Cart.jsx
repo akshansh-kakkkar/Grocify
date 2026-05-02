@@ -34,7 +34,7 @@ export const Cart = () => {
   const total = subTotal + delivery;
   const handlePayment = async () => {
     try {
-      const res = await fetch(import.meta.VITE_DEPLOY__LINK, {
+      const res = await fetch(import.meta.VITE_DEPLOY_LINK, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
