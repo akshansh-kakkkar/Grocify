@@ -42,6 +42,18 @@ export const Cart = () => {
         },
         body: JSON.stringify({ amount: total }),
       });
+      
+      if (!res.ok) {
+        const text = await res.text();
+        throw new Error(`Server responded with ${res.status}: ${text.slice(0, 100)}`);
+      }
+      
+      const contentType = res.headers.get("content-type");
+      if (!contentType || !contentType.includes("application/json")) {
+        const text = await res.text();
+        throw new Error(`Expected JSON but got ${contentType}: ${text.slice(0, 100)}`);
+      }
+
       const data = await res.json();
       const options = {
         key: import.meta.env.VITE_RAZORPAY_KEY,
@@ -97,7 +109,7 @@ export const Cart = () => {
                     (c) => String(c.id) === String(item.id),
                   );
                   return (
-                    <div className="bg-gray-100 xl:min-w-[900px]  xl:max-w-[1200px] lg:max-w-[1000px] lg:min-w-[600px] sm:h-[120px] flex-flex-col  rounded-xl sm:grid flex justify-between w-full gap-5 sm:grid-cols-[100px_1fr_200px_60px] items-center py-2 px-2 sm:p-3">
+                    <div key={item.id} className="bg-gray-100 xl:min-w-[900px]  xl:max-w-[1200px] lg:max-w-[1000px] lg:min-w-[600px] sm:h-[120px] flex-flex-col  rounded-xl sm:grid flex justify-between w-full gap-5 sm:grid-cols-[100px_1fr_200px_60px] items-center py-2 px-2 sm:p-3">
                       <div className="flex items-center gap-4">
                         <img
                           src={item.image}
