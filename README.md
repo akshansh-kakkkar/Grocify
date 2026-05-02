@@ -8,7 +8,7 @@
  * -> Remove items from the cart
  * -> Place Order
  * ->  Browse Products
-
+* -> Animations made using Framer-Motion
 ## Tech Stack
 * -> React 
 * -> Tailwindcss

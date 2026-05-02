@@ -1,5 +1,4 @@
 import { Route, Routes, useLocation } from "react-router-dom";
-import Navbar from "./components/Navbar";
 import HomePage from "./Pages/LandingPage/HomePage";
 import FruitsNVeggiesPage from "./Pages/ProductsPage/FruitsNVeggiesPage";
 import MeatNSeaFoodPage from "./Pages/ProductsPage/MeatNSeaFoodPage";
@@ -12,8 +11,9 @@ import { Cart } from "./Pages/CartPage/Cart";
 import Payment from "./Pages/CartPage/Payment";
 import { useEffect, useState } from "react";
 import Loading from "./components/Loading";
-import { time } from "framer-motion";
+
 import { ToastContainer } from "react-toastify";
+import SecondaryNavbar from "./components/SecondaryNavbar";
 function App() {
   const [isLoading, setIsLoading] = useState(false)
   const location = useLocation();
@@ -26,12 +26,11 @@ function App() {
   }, [location])
   return (
     <>
-    
-      <Navbar />
+      {isLoading && <Loading />}
+      
       <ScrollToTop />
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route element={isLoading && <Loading />} />
         <Route path="/fruitsnveggies" element={<FruitsNVeggiesPage />} />
         <Route path="/meatnseafood" element={<MeatNSeaFoodPage />} />
         <Route path="/dairyneggs" element={<MilknEggsPage />} />

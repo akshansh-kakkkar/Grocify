@@ -10,14 +10,26 @@ import {
 import products from "../../data/AllProducts.json";
 import useFavorites from "../../hooks/FavouriteHook";
 import { useCart } from "../../context/AddProductContext";
+import SecondaryNavbar from "../../components/SecondaryNavbar";
+import { useLocation } from "react-router-dom";
 
 const AllProducts = () => {
   const AllProducts = products;
   const { favorites, toggleFavorite } = useFavorites();
   const { addItemToCart, cart, removeItem, decreaseQty } = useCart();
-
+  const query = new URLSearchParams(useLocation().search);
+  const search = query.get("search")?.toLowerCase() || "";
+  const filteredProducts = search === "" ? AllProducts : AllProducts.filter((item) => item.name.toLowerCase().includes(search))
   return (
     <>
+      <SecondaryNavbar />
+            {filteredProducts.length === 0 & filteredProducts !== "" ? (
+        <div className="h-[50vh] justify-center items-center text-center flex-col  flex">
+          <div className="text-3xl font-medium poppins">No Results found for <span className="text-orange-500 poppins font-bold uppercase">"{search}"</span></div>
+          <div className="text-2xl text-orange-500 poppins font-bold">Try searching for something else</div>
+        </div>
+      )   : (
+        <>
       <div className=" relative h-[50vh] w-full">
         <div className="bg-[url('/assets/all-banner.webp')]  bg-cover bg-center w-full h-full"></div>
         <div className="bg-black/50 absolute inset-0"></div>
@@ -28,8 +40,8 @@ const AllProducts = () => {
         </div>
       </div>
 
-      <div className="grid lg::grid-cols-3 md:grid-cols-2 sm:grid-cols-1 xl:grid-cols-4 place-items-center gap-6 md:mx-24 my-12">
-        {AllProducts.map((item) => {
+      <div className="grid lg::grid-cols-3 md:grid-cols- 2 sm:grid-cols-1 xl:grid-cols-4 place-items-center gap-6 md:mx-24 my-12">
+        {filteredProducts.map((item) => {
           const cartIncludes = cart.find(
             (c) => String(c.id) === String(item.id),
           );
@@ -123,6 +135,8 @@ const AllProducts = () => {
           );
         })}
       </div>
+      </>
+      )}
     </>
   );
 };

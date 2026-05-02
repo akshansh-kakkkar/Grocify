@@ -7,10 +7,12 @@ import OurProcess from "./OurProcess";
 import CustomersSaying from "./CustomersSaying";
 import OurPrducts from "./OurPrducts";
 import { Route } from "react-router-dom";
+import Navbar from "../../components/Navbar";
 
 const HomePage = () => {
   return (
     <>
+    <Navbar />
       <HeroSection />
       <ShopByCategory />
       <Values />

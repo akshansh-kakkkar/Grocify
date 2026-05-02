@@ -5,6 +5,7 @@ import { faPlus, faHeart, faTrash, faMinus } from "@fortawesome/free-solid-svg-i
 import products from "../../data/AllProducts.json";
 import useFavorites from "../../hooks/FavouriteHook";
 import { useCart } from "../../context/AddProductContext";
+import SecondaryNavbar from "../../components/SecondaryNavbar";
 
 const MeatNSeaFoodPage = () => {
   const { favorites, toggleFavorite } = useFavorites();
@@ -15,6 +16,7 @@ const MeatNSeaFoodPage = () => {
 
   return (
     <>
+    <SecondaryNavbar />
       <div className=" relative h-[50vh] w-full">
         <div className="bg-[url('/assets/seafood-banner.webp')]  bg-cover bg-center w-full h-full"></div>
         <div className="bg-black/50 absolute inset-0"></div>

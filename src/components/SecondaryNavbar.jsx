@@ -10,7 +10,7 @@ import {
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { motion, AnimatePresence } from "framer-motion";
 import SearchBar from "./SearchBar";
-const Navbar = () => {
+const SecondaryNavbar = () => {
   const navigate = useNavigate();
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -47,32 +47,6 @@ const Navbar = () => {
       >
         Gr<span className="text-orange-500">O</span>cify
       </NavLink>
-      <div className="gap-8 lg:translate-x-8  lg:flex hidden  poppins text-[#686868]">
-        <a
-          className={activeSection === "hero" ? " text-orange-500" : " "}
-          href="#hero"
-        >
-          Home
-        </a>
-        <a
-          className={activeSection === "category" ? " text-orange-500" : " "}
-          href="#category"
-        >
-          Category
-        </a>
-        <a
-          className={activeSection === "our-products" ? " text-orange-500" : " "}
-          href="#our-products"
-        >
-          Products
-        </a>
-        <a
-          className={activeSection === "reviews" ? " text-orange-500" : " "}
-          href="#reviews"
-        >
-          Reviews
-        </a>
- </div>
 
       <AnimatePresence>
         {open && (
@@ -91,40 +65,19 @@ const Navbar = () => {
               transition={{ type: "tween", duration: 0.3 }}
               className="flex text-xl fixed flex-col gap-6 left-0 inter font-medium text-[#070707] h-[350px] w-[300px] mt-23 bg-orange-200 backdrop-blur-2xl rounded-2xl items-center justify-center  ml-8 p-6 z-50"
             >
-                 <a
-          className={activeSection === "hero" ? " text-orange-500" : " "}
-          href="#hero"
-        >
-          Home
-        </a>
-        <a
-          className={activeSection === "category" ? " text-orange-500" : " "}
-          href="#category"
-        >
-          Category
-        </a>
-        <a
-          className={activeSection === "our-products" ? " text-orange-500" : " "}
-          href="#our-products"
-        >
-          Products
-        </a>
-        <a
-          className={activeSection === "reviews" ? " text-orange-500" : " "}
-          href="#reviews"
-        >
-          Reviews
-        </a>
-        <SearchBar />
+              <div>
+                <SearchBar />
+              </div>
             </motion.div>
           </motion.div>
         )}
       </AnimatePresence>
-
       <div className="flex items-center gap-3">
-        <div className="relative lg:block hidden ">
-<SearchBar />
+        <div className="lg:block hidden">
+          <SearchBar  />
         </div>
+
+
         <motion.div
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.95 }}
@@ -164,4 +117,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default SecondaryNavbar;

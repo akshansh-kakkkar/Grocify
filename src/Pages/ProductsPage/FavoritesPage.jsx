@@ -11,6 +11,7 @@ import useFavorites from "../../hooks/FavouriteHook";
 import { motion } from "framer-motion";
 import products from "../../data/AllProducts.json";
 import { useCart } from "../../context/AddProductContext";
+import SecondaryNavbar from "../../components/SecondaryNavbar";
 const FavoritesPage = () => {
   const { favorites, toggleFavorite } = useFavorites();
   const { addItemToCart, decreaseQty, cart, removeItem } = useCart();
@@ -19,6 +20,7 @@ const FavoritesPage = () => {
   );
   return (
     <>
+      <SecondaryNavbar />
       <div className=" relative h-[50vh] w-full">
         <div className="bg-[url('/assets/all-banner.webp')]  bg-cover bg-center w-full h-full"></div>
         <div className="bg-black/50 absolute inset-0"></div>

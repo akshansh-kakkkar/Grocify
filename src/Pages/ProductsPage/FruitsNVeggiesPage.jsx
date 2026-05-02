@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import products from "../../data/AllProducts.json";
 import useFavorites from "../../hooks/FavouriteHook";
 import { useCart } from "../../context/AddProductContext";
+import SecondaryNavbar from "../../components/SecondaryNavbar";
 const FruitsNVeggiesPage = () => {
   const { cart, removeItem, addItemToCart, decreaseQty } = useCart();
   const { favorites, toggleFavorite } = useFavorites();
@@ -12,6 +13,7 @@ const FruitsNVeggiesPage = () => {
   );
   return (
     <>
+    <SecondaryNavbar />
       <div className=" relative h-[50vh] w-full">
         <div className="bg-[url('/assets/fruits-banner.webp')]  bg-cover bg-center w-full h-full"></div>
         <div className="bg-black/50 absolute inset-0"></div>

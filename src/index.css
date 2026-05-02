@@ -1,6 +1,8 @@
 @import "tailwindcss";
 
-
+img{
+  user-select: none;
+}
 .roboto {
   font-family: "Roboto", sans-serif;
 }
