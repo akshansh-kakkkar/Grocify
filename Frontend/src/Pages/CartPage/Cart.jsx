@@ -31,7 +31,7 @@ export const Cart = () => {
   const total = subTotal + delivery;
   const handlePayment = async () => {
     try {
-      const res = await fetch("http://localhost:3000/pay/create-order", {
+      const res = await fetch("https://grocify-4yis.vercel.app/", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
