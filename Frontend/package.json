@@ -16,6 +16,7 @@
     "@fortawesome/free-solid-svg-icons": "^7.2.0",
     "@fortawesome/react-fontawesome": "^3.3.0",
     "@tailwindcss/vite": "^4.2.2",
+    "axios": "^1.16.0",
     "browser": "^0.2.6",
     "dom": "^0.0.3",
     "emailjs": "^5.0.0",
