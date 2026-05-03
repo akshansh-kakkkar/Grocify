@@ -26,7 +26,7 @@ An E-commerce platform to buy groceries with a paymetn gateway
 * -> EmailJS
 
 ## Deploy link
-https://grocify-pkjl-git-main-akshansh-kakkkars-projects.vercel.app/
+https://grocify-pkjl.vercel.app/
 
 
 ``` text
