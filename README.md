@@ -13,6 +13,7 @@ An E-commerce platform to buy groceries with a paymetn gateway
 * -> Animations made using Framer-Motion
 * -> Payment Gateway
 * -> Toast Icon
+* -> automated email system using email Js
 ## Tech Stack 
 * -> React Js
 * -> Express Js
@@ -22,6 +23,7 @@ An E-commerce platform to buy groceries with a paymetn gateway
 * -> FontAwesome
 * -> Framer Motion
 * -> Razorpay auth
+* -> EmailJS
 
 ## Deploy link
 https://grocify-pkjl-git-main-akshansh-kakkkars-projects.vercel.app/
